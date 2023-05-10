@@ -1,5 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
+@import 'partials/variables';
+@import 'partials/mixins';
+
 * {
     margin: 0;
     padding: 0;
@@ -101,6 +104,14 @@ main {
     cursor: pointer;
 }
 
+#comics button:hover {
+    background-color: lighten(#0282f9, 10);
+}
+
+#comics button:active {
+    background-color: darken(#0282f9, 10);
+}
+
 /* MOVIES */
 #movies {
     height: 500px;
@@ -128,6 +139,14 @@ main {
     color: #fff;
     border: none;
     cursor: pointer;
+}
+
+#collectibles .ms_load:hover {
+    background-color: lighten(#0282f9, 10);
+}
+
+#collectibles .ms_load:active {
+    background-color: darken(#0282f9, 10);
 }
 
 /* VIDEOS */
@@ -174,6 +193,14 @@ main {
     cursor: pointer;
 }
 
+#shop .ms_button:hover {
+    background-color: lighten(#0282f9, 10);
+}
+
+#shop .ms_button:active {
+    background-color: darken(#0282f9, 10);
+}
+
 #shop .ms_load {
     margin: 20px auto;
     padding: 1rem 3rem;
@@ -181,6 +208,14 @@ main {
     color: #fff;
     border: none;
     cursor: pointer;
+}
+
+#shop .ms_load:hover {
+    background-color: lighten(#0282f9, 10);
+}
+
+#shop .ms_load:active {
+    background-color: darken(#0282f9, 10);
 }
 
 
@@ -221,6 +256,10 @@ main {
     font-size: 12px;
 }
 
+#footer-top .container-lg ul li a:hover {
+    text-decoration: underline;
+}
+
 /* FOOTER BOTTOM */
 #footer-bottom {
     height: 120px;
@@ -238,7 +277,16 @@ main {
     cursor: pointer;
 }
 
+#footer-bottom button:hover {
+    background-color: #fff;
+    color: #0282f9;
+}
+
 #footer-bottom div ul li {
     display: inline-block;
     padding: 10px;
+}
+
+#footer-bottom div ul li a img:hover {
+    filter: brightness(200%);
 }
