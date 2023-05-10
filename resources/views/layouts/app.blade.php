@@ -21,9 +21,7 @@
     @include('partials.hero')
 
     <main>
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
     </main>
 
     @include('partials.footertop')
