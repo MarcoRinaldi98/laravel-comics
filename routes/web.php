@@ -42,7 +42,9 @@ Route::get('/games', function () {
 
 Route::get('/collectibles', function () {
 
-    return view('collectibles');
+    $movies = config('db');
+
+    return view('collectibles', compact('movies'));
 })->name('collectibles');
 
 Route::get('/videos', function () {
@@ -62,5 +64,7 @@ Route::get('/news', function () {
 
 Route::get('/shop', function () {
 
-    return view('shop');
+    $movies = config('db');
+
+    return view('shop', compact('movies'));
 })->name('shop');
