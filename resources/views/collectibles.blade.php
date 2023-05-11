@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'DC Comics | Collectibles')
+@section('page-title', 'Collectibles')
 
 @section('content')
     <section id="collectibles" class="container-lg py-5">

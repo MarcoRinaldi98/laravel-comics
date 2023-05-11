@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'DC Comics | Movies')
+@section('page-title', 'Movies')
 
 @section('content')
     <section id="movies">

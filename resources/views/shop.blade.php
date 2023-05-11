@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'DC Comics | Shop')
+@section('page-title', 'Shop')
 
 @section('content')
     <section id="shop" class="container-lg py-5 d-flex flex-wrap">

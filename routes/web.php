@@ -15,56 +15,104 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/characters', function () {
 
-    return view('characters');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'icons' => config('db.footer.icons')
+    ];
+
+    return view('characters', $data);
 })->name('characters');
 
 Route::get('/', function () {
 
-    $movies = config('db');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'movies' => config('db.movies'),
+        'icons' => config('db.footer.icons')
+    ];
 
-    return view('comics', compact('movies'));
+    return view('comics', $data);
 })->name('comics');
 
 Route::get('/movies', function () {
 
-    return view('movies');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'icons' => config('db.footer.icons')
+    ];
+
+    return view('movies', $data);
 })->name('movies');
 
 Route::get('/tv', function () {
 
-    return view('tv');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'icons' => config('db.footer.icons')
+    ];
+
+    return view('tv', $data);
 })->name('tv');
 
 Route::get('/games', function () {
 
-    return view('games');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'icons' => config('db.footer.icons')
+    ];
+
+    return view('games', $data);
 })->name('games');
 
 Route::get('/collectibles', function () {
 
-    $movies = config('db');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'movies' => config('db.movies'),
+        'icons' => config('db.footer.icons')
+    ];
 
-    return view('collectibles', compact('movies'));
+    return view('collectibles', $data);
 })->name('collectibles');
 
 Route::get('/videos', function () {
 
-    return view('videos');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'icons' => config('db.footer.icons')
+    ];
+
+    return view('videos', $data);
 })->name('videos');
 
 Route::get('/fans', function () {
 
-    return view('fans');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'movies' => config('db.movies'),
+        'icons' => config('db.footer.icons')
+    ];
+
+    return view('fans', $data);
 })->name('fans');
 
 Route::get('/news', function () {
 
-    return view('news');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'icons' => config('db.footer.icons')
+    ];
+
+    return view('news', $data);
 })->name('news');
 
 Route::get('/shop', function () {
 
-    $movies = config('db');
+    $data = [
+        'navlinks' => config('db.navlinks'),
+        'movies' => config('db.movies'),
+        'icons' => config('db.footer.icons')
+    ];
 
-    return view('shop', compact('movies'));
+    return view('shop', $data);
 })->name('shop');

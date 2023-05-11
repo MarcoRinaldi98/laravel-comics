@@ -5,31 +5,13 @@
             <li class="text-primary fw-bolder">
                 FOLLOW US
             </li>
-            <li>
-                <a href="#">
-                    <img src="{{ Vite::asset('resources/img/footer-facebook.png') }}" alt="Logo facebook">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ Vite::asset('resources/img/footer-twitter.png') }}" alt="Logo twitter">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ Vite::asset('resources/img/footer-youtube.png') }}" alt="Logo youtube">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}" alt="Logo pinterest">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ Vite::asset('resources/img/footer-periscope.png') }}" alt="Logo periscope">
-                </a>
-            </li>
+            @foreach ($icons as $icon)
+                <li>
+                    <a href="#">
+                        <img src="{{ Vite::asset('resources/img/' . $icon['link']) }}" alt="Logo di {{ $icon['nome'] }}">
+                    </a>
+                </li>
+            @endforeach
         </ul>
     </div>
 </section>
